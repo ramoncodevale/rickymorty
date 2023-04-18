@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Card = ({name, image, gender, species}) => {
+const Card = ({name, image, gender, species, status}) => {
   return (
-    <div>
-        <h1>{name}</h1>
+    <div className='w-[250px]  bg-black mx-3 mt-10'>
+        <h1 className='text-white'>{name}</h1>
         
         <img src={image} alt="" />
-        <p>{gender}</p>
-        <p>{species}</p>
+        <p className='text-white'>{gender}</p>
+        <p className='text-white'>{species}</p>
+        <p className='text-white'>{status}</p>
+
     </div>
   )
 }
