@@ -30,7 +30,7 @@ const Navbar = () => {
     setSearchText(event.target.value);
   };
   return (
-    <div className='bg-zinc-900 flex justify-between px-6 w-full h-[80px]'>
+    <div className='bg-[#000000] flex justify-between px-6 w-full h-[80px]'>
        <img className='w-[200px]' src={Logo} /> 
        <form>
         <input className=" bg-white placeholder-black mt-[20px] px-3 rounded-md sm:w-9 md:w-32 lg:w-54 h-8 " type="text"   name="search" placeholder='Search character ...' value={searchText} onChange={handleSearch}   />
