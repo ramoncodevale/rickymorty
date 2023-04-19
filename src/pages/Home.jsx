@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import { api } from '../lib/api';
 
-import "./Home.css";
-
 
 const Home = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -15,8 +13,7 @@ const Home = () => {
         .get("/character")
         .then((response) => {
           setEpisodes(response.data.results);
-        //   console.log(response.data.results);
-        console.log(response.data.results.location.name)
+        console.log(response.data.results)
         })
         .catch((error) => {
           console.log(error);
@@ -27,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="bg-[url('../assets/bg-image.png')]">
-    <div className="grid grid-cols-4">
+    <div className="sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {episodes.map((episode) => (
         <Card
         key={episode.id}
