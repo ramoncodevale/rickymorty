@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       await api
-        .get("/epsodios")
+        .get("/character")
         .then((response) => {
           setEpisodes(response.data.results);
         //   console.log(response.data.results);
@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='bg-lime-200 grid grid-cols-4 '>
+    <div className='bg-[#000000]  grid grid-cols-4 '>
       {episodes.map((episode) => (
         <Card
           key={episode.id}
