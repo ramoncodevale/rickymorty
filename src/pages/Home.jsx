@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+
 import Card from '../components/Card';
 import { api } from '../lib/api';
+
+import "./Home.css";
+
 
 const Home = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -22,10 +26,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='bg-[#000000]  grid grid-cols-4 '>
+    <div className="bg-[url('../assets/bg-image.png')]">
+    <div className="grid grid-cols-4">
       {episodes.map((episode) => (
         <Card
-          key={episode.id}
+        key={episode.id}
           name={episode.name}
           airDate={episode.air_date}
           image={episode.image}
@@ -34,9 +39,9 @@ const Home = () => {
           status={episode.status}
         />
       ))}
+      </div>
     </div>
   );
 };
 
 export default Home;
-
